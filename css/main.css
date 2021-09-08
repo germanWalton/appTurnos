@@ -108,10 +108,10 @@ a:hover {
 
 .container-fluid,
 .container-registro {
-    /* width: 620px; */
-    /* margin: auto; */
-    /* padding: 30px 30px 20px; */
-    /* box-sizing: border-box; */
+    /* width: 620px;
+    margin: auto;
+    padding: 30px 30px 20px;
+    box-sizing: border-box; */
     background-color: rgba(0, 0, 0, 0.31);
 }
 
@@ -387,14 +387,17 @@ h2 {
         width: 430px;
         padding: 17px 10px 20px;
     }
+    .form-input {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 414px) {
     .form-input {
-        width: 100%;
+        width: 97%;
     }
     .container {
-        width: 350px;
+        width: 370px;
     }
     label.form-label {
         width: 100%;

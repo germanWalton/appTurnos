@@ -15,7 +15,7 @@ if ("pacientes" in localStorage) {
 
 //FUNCION QUE GENERA LA INTERFAZ HTML CON DATOS DEL PACIENTE Y TURNO
 function turnoUI(paciente) {
-    $('#datosPaciente').html('');
+    $('#datosPaciente').html('').hide();
     for (const registrado of paciente) {
         $('#datosPaciente').append(`<div class="turno  p-3 m-3 col-md-5 col-xl-3">
                          <ul class="field-list">
@@ -29,7 +29,7 @@ function turnoUI(paciente) {
                         <li>  <label class= "form-label">Cobertura:</label><div class="form-input"><input type="text" disabled value="${registrado.datosPaciente.cobertura}"></div></li>
                         <li>  <label class= "form-label">Especialidad:</label><div class="form-input"><input type="text" disabled value="${registrado.turnoPaciente.especialidad}"></div></li>
                         <li>  <label class= "form-label">Fecha:</label><div class="form-input"><input type="text" disabled value="${registrado.turnoPaciente.fecha}"></div></li> 
-                        <li>  <label class= "form-label">Hora:</label><div class="form-input"><input type="text" disabled value="${registrado.turnoPaciente.hora}"></div></li></ul> <div class="botones text-right"><button id="${registrado.datosPaciente.id}" class="btn btn-editar"type="button" data-toggle="modal" data-target="#exampleModal">Editar</button><button id="${registrado.datosPaciente.id}" class="btn btn-eliminar">Eliminar</button></div></div> `).hide().fadeIn(1500)
+                        <li>  <label class= "form-label">Hora:</label><div class="form-input"><input type="text" disabled value="${registrado.turnoPaciente.hora}"></div></li></ul> <div class="botones text-right"><button id="${registrado.datosPaciente.id}" class="btn btn-editar"type="button" data-toggle="modal" data-target="#exampleModal">Editar</button><button id="${registrado.datosPaciente.id}" class="btn btn-eliminar">Eliminar</button></div></div> `).fadeIn(1500)
 
     }
     $('.btn-eliminar').on("click", eliminarTurno);
