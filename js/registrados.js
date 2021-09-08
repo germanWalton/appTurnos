@@ -32,8 +32,12 @@ function turnoUI(paciente) {
                         <li>  <label class= "form-label">Hora:</label><div class="form-input"><input type="text" disabled value="${registrado.turnoPaciente.hora}"></div></li></ul> <div class="botones text-right"><button id="${registrado.datosPaciente.id}" class="btn btn-editar"type="button" data-toggle="modal" data-target="#exampleModal">Editar</button><button id="${registrado.datosPaciente.id}" class="btn btn-eliminar">Eliminar</button></div></div> `).fadeIn(1500)
 
     }
+    // EVENTOS PARA LOS BOTONES
+
     $('.btn-eliminar').on("click", eliminarTurno);
     $('.btn-editar').on("click", editarTurno)
+
+    // CAMBIAR EL TEXTO EN PANTALLA SI NO HAY REGISTROS
 
     if (registradosInStorage.length == 0) {
         $('h1').text('No hay turnos registrados');
@@ -129,7 +133,7 @@ function editarTurno(e) {
   </div></form>`);
 
 
-    //EVENTLISTENER PARA BOTON GUARDAR CAMBIOS
+    //EVENTO PARA BOTON GUARDAR CAMBIOS
 
     $('#salvar-cambios').click(function(e) {
 
@@ -152,7 +156,7 @@ function editarTurno(e) {
         turnoUI(registradosInStorage)
     })
 
-    //EVENTLISTENER PARA BOTON CERRAR
+    //EVENTO PARA BOTON CERRAR
 
     $('#cerrar').click(function(e) {
         e.preventDefault();
